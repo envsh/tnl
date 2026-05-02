@@ -1,0 +1,15 @@
+{
+  "name": "hturnal-cfworker",
+  "version": "1.0.0",
+  "description": "hturnal HTTP STUN/TURN server on Cloudflare Workers",
+  "scripts": {
+    "dev": "wrangler dev --port 8181",
+    "deploy": "wrangler deploy",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0",
+    "@cloudflare/workers-types": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
