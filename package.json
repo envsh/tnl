@@ -1,5 +1,5 @@
 {
-  "name": "hturnal-cfworker",
+  "name": "cftnl",
   "version": "1.0.0",
   "description": "hturnal HTTP STUN/TURN server on Cloudflare Workers",
   "scripts": {

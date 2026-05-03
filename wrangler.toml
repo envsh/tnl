@@ -1,4 +1,4 @@
-name = "hturnal-worker"
+name = "cftnl"
 main = "src/index.ts"
 compatibility_date = "2025-07-18"
 
@@ -9,10 +9,17 @@ bindings = [
 
 [[migrations]]
 tag = "v1"
-new_classes = ["HturnalDurableObject"]
+new_sqlite_classes = ["HturnalDurableObject"]
 
 [vars]
 STORAGE_BACKEND = "memory"
 
 [triggers]
 crons = ["*/1 * * * *"]
+
+
+[observability]
+[observability.logs]
+enabled = true
+invocation_logs = true
+

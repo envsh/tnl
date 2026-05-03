@@ -8,7 +8,7 @@ export interface IStorage {
   saveStream(streamID: string, stream: any): void;
   getStream(streamID: string): any | null;
   deleteStream(streamID: string): void;
-  cleanupExpired?(): number;
+  cleanupExpired?(): Promise<number>;
 }
 
 // 内存存储实现
@@ -49,7 +49,7 @@ export class MemoryStorage implements IStorage {
     this.streams.delete(streamID);
   }
 
-  cleanupExpired(): number {
+  async cleanupExpired(): Promise<number> {
     const now = Date.now();
     let deleted = 0;
 
